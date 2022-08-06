@@ -1,3 +1,47 @@
+Sample Input
+
+# 12
+# insert 0 5
+# insert 1 10
+# insert 0 6
+# print
+# remove 6
+# append 9
+# append 1
+# sort
+# print
+# pop
+# reverse
+# print
+
+
+if __name__ == '__main__':
+    N = int(input())
+
+list1 = []
+# list1.insert(1,"a")
+# print(list1)
+for i in range(N):
+    s = str(input()).split(" ")
+    # print(s)
+    if s[0] == "insert":
+        list1.insert(int(s[1]), int(s[2]))
+    elif s[0] == "remove":
+        list1.remove(int(s[1]))
+    elif s[0] == 'append':
+        list1.append(int(s[1]))
+    elif s[0] == 'sort':
+        list1.sort()
+    elif s[0] == 'pop':
+        list1.pop()
+    elif s[0] == 'reverse':
+        list1.reverse()
+    else:
+        print(list1)
+
+
+
+
 thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
 Marks = [91,92,95,100,86,45,100]
 thislist.sort()
